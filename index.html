@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KVELD Showroom</title>
+<meta name="description" content="Seven guitars rebuilt from measured drawings. A concept showroom for KVELD.">
+<link rel="canonical" href="https://sam1983aing.github.io/kveld/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sam1983aing.github.io/kveld/">
+<meta property="og:title" content="KVELD: A 3D Showroom for Seven Guitars">
+<meta property="og:description" content="Seven guitars on lit plinths in a dark room. Turn them, walk around one up close, hear it played and order it.">
+<meta property="og:image" content="https://sam1983aing.github.io/kveld/assets/cover.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="600">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/Sam1983Aing/aura-assets@1.25.0/kveld/assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/Sam1983Aing/aura-assets@1.25.0/kveld/vendor/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/Sam1983Aing/aura-assets@1.25.0/kveld/app/kveld.min.js" as="script">
+<style>html,body{background:#050708;color:#efeae0}.no-cdn{font-family:system-ui,sans-serif}.no-cdn body{padding:32px;max-width:40em}.no-cdn .loader,.no-cdn svg,.no-cdn canvas,.no-cdn button,.no-cdn .room__fallback{display:none}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Sam1983Aing/aura-assets@1.25.0/kveld/app/kveld.min.css">
+</head>
+<body>
+<div class="loader" aria-hidden="true">
+<div class="loader__ring">
+<svg viewBox="0 0 400 400">
+<defs><linearGradient id="loader-fade" gradientUnits="userSpaceOnUse" x1="0" y1="200" x2="0" y2="280"><stop class="loader__stop" offset="0"/><stop class="loader__stop" offset="0.55" stop-opacity="0.55"/><stop class="loader__stop" offset="1" stop-opacity="0"/></linearGradient></defs>
+<path class="loader__track" d="M59.8 277.1A160 160 0 1 1 340.2 277.1"/>
+<path class="loader__arc" d="M59.8 277.1A160 160 0 1 1 340.2 277.1"/>
+<circle class="loader__tip" r="4"/>
+</svg>
+<div class="loader__in"><p class="loader__mark">KVELD</p><p class="loader__count"><span data-count>000</span></p></div>
+</div>
+</div>
+<main>
+<section class="room" id="room" aria-label="The showroom">
+<canvas class="room__gl" aria-hidden="true"></canvas>
+<p class="room__fallback">The showroom needs WebGL. The drawings below still work.</p>
+<div class="room__ui">
+<div class="room__copy">
+<p class="eyebrow" data-intro>Showroom · Seven guitars</p>
+<h1 class="room__h1" data-split>Drawn from<br>the <em>originals</em>.</h1>
+<p class="room__lede" data-intro>Seven guitars rebuilt from the measured drawings of instruments that shaped the sound. One quiet room to hear them in.</p>
+</div>
+<div class="room__stage">
+<div class="room__title" aria-live="polite">
+<p class="room__count"><span data-no>01</span><i>/</i>07</p>
+<h2 class="room__name"><span data-name>Floe</span></h2>
+</div>
+<button class="room__view" type="button" data-view>
+<span>View guitar</span>
+<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor"/></svg>
+</button>
+</div>
+<nav class="room__controls" aria-label="Choose a guitar">
+<button class="room__arrow room__arrow--halo" type="button" data-prev aria-label="Previous guitar">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor"/></svg>
+</button>
+<button class="room__arrow room__arrow--halo" type="button" data-next aria-label="Next guitar">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6l6 6-6 6" fill="none" stroke="currentColor"/></svg>
+</button>
+</nav>
+<a class="room__scroll" href="#drawings" data-scroll-cue><span>Scroll</span><i></i></a>
+</div>
+<div class="walk" data-walk aria-hidden="true">
+<div class="walk__shade"></div>
+</div>
+<aside class="closeup" aria-hidden="true" data-closeup>
+<div class="closeup__shade" data-cu-shade></div>
+<button class="closeup__back" type="button" data-back>
+<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M24 5H2M6 1L2 5l4 4" fill="none" stroke="currentColor"/></svg>
+<span>Back to the room</span>
+</button>
+<div class="closeup__panel">
+<p class="closeup__no"><span data-cu-no>01</span><i>/</i>07<b data-cu-after>After a 1950s single-cut</b></p>
+<h3 class="closeup__name"><span data-cu-name>Floe</span></h3>
+<p class="closeup__claim" data-cu-claim></p>
+<div class="closeup__offer">
+<ul class="closeup__figures" data-cu-figures></ul>
+<button class="closeup__book" type="button" data-cu-book>
+<span>Book a visit</span>
+<svg viewBox="0 0 24 10" aria-hidden="true"><path d="M0 5h22M18 1l4 4-4 4" fill="none" stroke="currentColor"/></svg>
+</button>
+</div>
+<dl class="closeup__specs" data-specs></dl>
+<div class="closeup__ours">
+<p class="closeup__k">Ours, not the sheet's</p>
+<p class="closeup__v" data-cu-ours></p>
+</div>
+</div>
+<nav class="closeup__rail" aria-label="The seven guitars">
+<button class="room__arrow" type="button" data-cu-prev aria-label="Previous guitar">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 6l-6 6 6 6" fill="none" stroke="currentColor"/></svg>
+</button>
+<ol class="closeup__names" data-cu-names></ol>
+<button class="room__arrow" type="button" data-cu-next aria-label="Next guitar">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6l6 6-6 6" fill="none" stroke="currentColor"/></svg>
+</button>
+<p class="closeup__hint">Drag to turn it. Scroll to come closer.</p>
+</nav>
+</aside>
+</section>
+<section class="drawing" id="drawings" data-theme="light">
+<div class="drawing__head">
+<p class="eyebrow" data-reveal>Floe · From the drawing</p>
+<h2 class="drawing__h2" data-split>The numbers<br>came <em>first</em>.</h2>
+<p class="drawing__text" data-reveal>Floe follows a 1950s single-cut drawn at full scale. We kept every number on that sheet, from the 25.5 inch scale to the 7.25 inch fretboard radius, and redrew only what carries our name: the headstock, the markers and the logo. The drawing below is plotted from the same figures that built the model above.</p>
+</div>
+<figure class="drawing__plate" data-plate>
+<svg class="blueprint" data-blueprint role="img" aria-label="Plan view of the Floe with its main dimensions"></svg>
+<figcaption>Plan view · 1:1 source, shown reduced · dimensions in inches</figcaption>
+</figure>
+<ol class="specs" data-spec-list></ol>
+</section>
+<section class="shop" id="workshop" aria-label="The workshop"></section>
+<section class="spot" id="guitars" aria-label="The seven guitars"></section>
+<section class="order" id="order" data-theme="light" aria-label="How to order"></section>
+<footer class="visit" id="visit">
+<p class="eyebrow" data-reveal>03 · Visit</p>
+<h2 class="visit__h2" data-split>Come and hear<br>them <em>played</em>.</h2>
+<a class="visit__ghost" href="#room" data-reveal>Book a visit</a>
+<div class="visit__meta" data-reveal>
+<p>KVELD Room 01<br>59.1244° N, 11.3875° E</p>
+<p>Open by appointment<br>Thursday to Saturday</p>
+</div>
+</footer>
+</main>
+<script src="https://cdn.jsdelivr.net/gh/Sam1983Aing/aura-assets@1.25.0/kveld/app/kveld.min.js" onerror="document.documentElement.classList.add('no-cdn')"></script>
+</body>
+</html>
