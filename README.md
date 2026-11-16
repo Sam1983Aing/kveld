@@ -21,7 +21,7 @@ KVELD is a fictional guitar maker, and the page is a concept study. Each guitar 
 
 three.js r186 (Draco GLB models, a reflective floor, bloom and depth of field), GSAP ScrollTrigger and Lenis. The room opens once the three guitars in view are in and loads the other four behind it. It lowers its render resolution on slower machines.
 
-This repository holds only the published page. `index.html` is a thin page: the code, the stylesheet, the models, stills, fonts and Draco decoder load from jsDelivr, pinned to a tag on [Sam1983Aing/aura-assets](https://github.com/Sam1983Aing/aura-assets/tree/1.25.0/kveld). The source lives in a separate private repository.
+This repository holds only the published page. `index.html` is a thin page: the code, the stylesheet, the models, stills, fonts and Draco decoder load from jsDelivr, pinned to a tag on [Sam1983Aing/aura-assets](https://github.com/Sam1983Aing/aura-assets/tree/1.25.0/kveld). The full source is public in [Sam1983Aing/kveld-showroom](https://github.com/Sam1983Aing/kveld-showroom): the page in `site/` and the Blender scripts that build the seven guitars in `blender/`.
 
 ## Run it locally
 
